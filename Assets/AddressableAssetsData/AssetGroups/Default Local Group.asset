@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f71c5133ec223cb46aff5d8d06fc4964
+  m_SerializeEntries:
+  - m_GUID: b22b86fd4a30ae240bbcc970905473cb
+    m_Address: icon_mantis
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7c125de34f5e2c9498e63d1737c6d645
+    m_Address: mantis
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 69023aa0e9385b4478c741ef74415688
+    m_Address: icon_role_enforce
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8134521dbf67f5b44bb96013c82f2366
+    m_Address: hp_bar_ally
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d3c82e00bb888264e9d1108bef309db1
+    m_Address: config_mantis
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2c351bda9c825da4583ee87522c5497e
+    m_Address: enemy_detector
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20c35bb5e40d2754ca24322fe040334e
+    m_Address: placed_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 198f67c0c0dad644baedc2e5fcab91ed
+    m_Address: placed_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 56a72e565b52eb2418aaddd04e5affb1
+    m_Address: hp_bar_enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2290570072ae1cc418ec720b61e2ec7e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ab81d732bb1897448ad3c44af594db2c, type: 2}
+    - {fileID: 11400000, guid: 7935970fe35f8174eba7b3b20e620bf2, type: 2}

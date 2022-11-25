@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b1b2311637258b9449c270a1e3655210
+  m_SerializeEntries:
+  - m_GUID: 2c351bda9c825da4583ee87522c5497e
+    m_Address: enemy_detector
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8134521dbf67f5b44bb96013c82f2366
+    m_Address: hp_bar_ally
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 56a72e565b52eb2418aaddd04e5affb1
+    m_Address: hp_bar_enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 68496569d4c4bde439346b44a089ddb8
+    m_Address: bullet_hamster
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4883c38ba5a064144a13580df31e19eb
+    m_Address: bullet_turkey
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ead245f65356f5149a78f8146c1a977e
+    m_Address: splat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b31a935c352968d4fb2c614ed4a59671
+    m_Address: sfx_hamster_shoot_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b4c194c435edbca41b3e598338d476ad
+    m_Address: sfx_axolotl_shoot_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a73dd4f6086696445839d8ffa2146b0e
+    m_Address: bullet_axolotl
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1f2947a37598cc2458709e8502ae9af3
+    m_Address: food
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 04fa64b96197bfb429dff4d0eb80d68d
+    m_Address: sushi
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2cfb27cb8537c6648b73ea65d3538944
+    m_Address: bullet_rocket
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1f1a3eefbde0ccd42af9116fdddba93a
+    m_Address: hamster
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c738113093180104d99bfe348b608c66
+    m_Address: pig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20c35bb5e40d2754ca24322fe040334e
+    m_Address: placed_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 198f67c0c0dad644baedc2e5fcab91ed
+    m_Address: placed_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 59903298f6ac2c240a7a94d5eae35a92
+    m_Address: placed_water
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f4e74bc149ecfd4db9ed8fdbd3cc5dc
+    m_Address: frog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c5d22dd6351c03f4c9f7f39f861a7f48
+    m_Address: frog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8d5c93c1866c1a247bf79eef6e8e00d7
+    m_Address: icon_frog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 74c814b6c3a8b35459dd36ec93a6dfb5
+    m_Address: icon_role_dark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ae2cf6630c2dd984198f2f05b2ad5289
+    m_Address: icon_role_electric
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: da7d9006c3cffe743b4ed2eae7d3012c
+    m_Address: icon_role_energy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0f6ef29d41c14f84c906acb50dc08d5d
+    m_Address: icon_role_fire
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6b4611368cb37f4888bd32bde811192
+    m_Address: icon_role_magic
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 69023aa0e9385b4478c741ef74415688
+    m_Address: icon_role_enforce
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7a140579bf5af98439681fb0f5b93ff2
+    m_Address: icon_role_water
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5386897c8da42194691ae9c0b01a1133
+    m_Address: iconrole_earth
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 43386b3ec4421aa4bb0e3199fbcf2b42
+    m_Address: icon_mantis
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 861c740fafe44184a8365d86eae6d240, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c63a35d4885d353498ef24416505286f, type: 2}
+    - {fileID: 11400000, guid: 498cac6cf4e620c449428c649f31193b, type: 2}
