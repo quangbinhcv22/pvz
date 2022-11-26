@@ -19,11 +19,11 @@ public class Enemy : Character
 
     protected override void OnActionDone()
     {
-        if (enemyDetector.enemies.Any())
+        if (EnemyDetector.enemies.Any())
         {
             base.OnActionDone();
 
-            foreach (var enemy in enemyDetector.enemies)
+            foreach (var enemy in EnemyDetector.enemies)
             {
                 enemy.TakeDamage(_data.attackDamage);
             }
@@ -49,7 +49,7 @@ public class Enemy : Character
 
     protected override void LoopStateAction()
     {
-        if (enemyDetector.enemies.Any())
+        if (EnemyDetector.enemies.Any())
         {
             StartAction();
         }

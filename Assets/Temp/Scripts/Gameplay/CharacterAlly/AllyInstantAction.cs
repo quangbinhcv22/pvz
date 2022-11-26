@@ -4,6 +4,9 @@ public class AllyInstantAction : Ally
 {
     public override void StartCycle()
     {
+        SelfCollider.enabled = true;
+        EnemyDetector.enabled = true;
+        
         Debug.Log("Start Action");
 
         StartAction();
@@ -16,7 +19,7 @@ public class AllyInstantAction : Ally
         Debug.Log("On Action Done");
 
         
-        foreach (var enemy in enemyDetector.enemies)
+        foreach (var enemy in EnemyDetector.enemies)
         {
             ActionForEnemy(enemy);
         }

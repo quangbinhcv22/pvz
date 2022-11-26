@@ -20,7 +20,7 @@ public class IcePet : Ally
 
     protected override void OnActionDone()
     {
-        foreach (var enemy in enemyDetector.enemies)
+        foreach (var enemy in EnemyDetector.enemies)
         {
             enemy.AddEffect(freezeEffect);
         }

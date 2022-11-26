@@ -21,6 +21,6 @@ MonoBehaviour:
     actionRange: 1.5
     actionDuration: 1
     actionCooldown: 1
-    attackDamage: 1
+    attackDamage: 150
     killDamage: 1000
     killCooldown: 25

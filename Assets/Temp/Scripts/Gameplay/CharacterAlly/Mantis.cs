@@ -47,7 +47,7 @@ public class Mantis : Ally
     {
         timeline.SetSeconds(0.15f).SetCallback(NextState).Restart();
 
-        foreach (var enemy in enemyDetector.enemies)
+        foreach (var enemy in EnemyDetector.enemies)
         {
             enemy.TakeDamage(_data.attackDamage, DamageSourceType.Normal);
         }

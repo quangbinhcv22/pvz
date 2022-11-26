@@ -6,6 +6,9 @@ public partial class Character
 
     protected virtual void Init()
     {
+        SelfCollider = GetComponent<Collider2D>();
+        
+        
         LoadHpBar();
 
         CalculateAnimFactor();
@@ -25,12 +28,13 @@ public partial class Character
     }
 
 
-    protected EnemyDetector enemyDetector;
+    protected Collider2D SelfCollider;
+    protected EnemyDetector EnemyDetector;
 
     protected virtual void ListenDetector()
     {
-        enemyDetector.onEnemyEnter += OnEnemyEnter;
-        enemyDetector.onAllEnemyExit += OnAllEnemyEnter;
+        EnemyDetector.onEnemyEnter += OnEnemyEnter;
+        EnemyDetector.onAllEnemyExit += OnAllEnemyEnter;
     }
 
 
@@ -48,10 +52,10 @@ public partial class Character
     {
         gameObject.layer = teamTest.ToLayer();
 
-        if (enemyDetector)
+        if (EnemyDetector)
         {
             var detectorLayer = teamTest.ToLayerDetector();
-            enemyDetector.gameObject.layer = detectorLayer;
+            EnemyDetector.gameObject.layer = detectorLayer;
         }
     }
 

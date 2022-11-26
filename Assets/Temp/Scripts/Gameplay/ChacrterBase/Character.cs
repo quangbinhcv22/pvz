@@ -21,7 +21,7 @@ public partial class Character : MonoBehaviour
 
             SetDirection(directionTest);
 
-            
+
             StartCycle();
         }
     }
@@ -34,12 +34,13 @@ public partial class Character : MonoBehaviour
 
     public virtual void TakeDamage(int damage, DamageSourceType source = DamageSourceType.Unset)
     {
-        HpCurrent.Value -= damage;
+        Stats[StatType.HealthCurrent].RuntimeBaseValue -= damage;
     }
 
     public virtual void AddEffect(Effect effect)
     {
-        Debug.Log($"<color=yellow>{name}</color> take <color=yellow>{effect.id}</color> for <color=yellow>{effect.duration}</color>");
+        Debug.Log(
+            $"<color=yellow>{name}</color> take <color=yellow>{effect.id}</color> for <color=yellow>{effect.duration}</color>");
     }
 
     public virtual void RemoveEffect(Effect effect)
@@ -65,8 +66,7 @@ public partial class Character : MonoBehaviour
     {
         _data = data;
 
-        HpMax.Value = _data.health;
-        HpCurrent.Value = _data.health;
+        SetStats(data);
 
         actionTime.Value = data.actionDuration;
         actionCooldown.Value = data.actionCooldown;
@@ -75,11 +75,11 @@ public partial class Character : MonoBehaviour
 
         if (data.UseRange)
         {
-            enemyDetector ??= Instantiate(Addressables.LoadAssetAsync<GameObject>("enemy_detector").WaitForCompletion())
+            EnemyDetector ??= Instantiate(Addressables.LoadAssetAsync<GameObject>("enemy_detector").WaitForCompletion())
                 .GetComponent<EnemyDetector>();
 
-            enemyDetector.transform.SetParent(transform);
-            enemyDetector.SetSize(new Vector2(data.actionRange, 1));
+            EnemyDetector.transform.SetParent(transform);
+            EnemyDetector.SetSize(new Vector2(data.actionRange, 1));
 
             ListenDetector();
         }
@@ -93,6 +93,6 @@ public partial class Character : MonoBehaviour
         var yRotate = Mathf.Sign(direction) > 0 ? 0 : 180;
 
         model.eulerAngles = new Vector3(default, yRotate);
-        enemyDetector.SetDirection(direction);
+        EnemyDetector.SetDirection(direction);
     }
 }

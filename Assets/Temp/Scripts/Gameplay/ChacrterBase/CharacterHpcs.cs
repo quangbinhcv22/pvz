@@ -10,9 +10,6 @@ public partial class Character
     {
         var key = $"hp_bar_{teamTest.ToString().ToLower()}";
         Addressables.InstantiateAsync(key, transform).Completed += OnLoadedHpBar;
-
-        HpCurrent.onValueChanged += OnHpCurrentChanged;
-        HpMax.onValueChanged += OnHpMaxChanged;
     }
 
     protected virtual void OnLoadedHpBar(AsyncOperationHandle<GameObject> barObject)
@@ -24,24 +21,9 @@ public partial class Character
     }
 
 
-    protected virtual void OnHpCurrentChanged(float newHp)
+    protected virtual void UpdateHpBar()
     {
-        if (HpCurrent.Value <= 0) StartDie();
-        UpdateHpBar();
-    }
-
-    protected virtual void OnHpMaxChanged(float newHpMax)
-    {
-        HpCurrent.SetMax(newHpMax);
-        UpdateHpBar();
-    }
-
-
-
-
-    protected virtual void UpdateHpBar(float unknown = default)
-    {
-        if (_hpBar) _hpBar.SetFill(HpCurrent.Value, HpMax.Value);
+        if (_hpBar) _hpBar.SetFill( Stats[StatType.HealthCurrent].RuntimeBaseValue, Stats[StatType.HealthMax].Value);
     }
 }
 

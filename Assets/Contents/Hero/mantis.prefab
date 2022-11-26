@@ -109,6 +109,8 @@ MonoBehaviour:
     actionDuration: 0
     actionCooldown: 0
     attackDamage: 0
+    animations:
+      die: {fileID: 0}
   teamTest: 0
   directionTest: 1
   presetAttackSpeedFactor: 1

@@ -7,7 +7,7 @@ public class Frog : Ally
     public override void SetConfig(Team team, CharacterData data)
     {
         base.SetConfig(team, data);
-        
+
         _frogData = (FrogData)data;
     }
 
@@ -21,7 +21,7 @@ public class Frog : Ally
         closestEnemy = null;
         var minDistance = float.MaxValue;
 
-        foreach (var enemy in enemyDetector.enemies)
+        foreach (var enemy in EnemyDetector.enemies)
         {
             var distance = Vector2.Distance(transform.position, enemy.transform.position);
 
@@ -36,23 +36,23 @@ public class Frog : Ally
     {
         if (closestEnemy)
         {
-            if (closestEnemy.HpCurrent.Value <= _frogData.killDamage)
+            if (closestEnemy.Stats[StatType.HealthCurrent].RuntimeBaseValue <= _frogData.killDamage)
             {
                 Destroy(closestEnemy.gameObject);
-        
+
                 Debug.Log("Nhai...");
-                
-                
+
+
                 animator.PlayOnce(StateName.Ultimate);
-                
+
                 timeline.SetSeconds(_frogData.killCooldown).SetCallback(NextState).Restart();
             }
             else
             {
                 Debug.Log("Attack...");
-                
+
                 closestEnemy.TakeDamage(_data.attackDamage);
-                
+
                 base.OnActionDone();
             }
         }

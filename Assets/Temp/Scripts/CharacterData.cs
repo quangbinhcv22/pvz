@@ -1,4 +1,5 @@
 using System;
+using Spine.Unity;
 using UnityEngine;
 
 [Serializable]
@@ -19,4 +20,13 @@ public class CharacterData
 
 
     public bool UseRange => actionRange > 0;
+
+    
+    [Space] public CharacterAnimationData animations;
+}
+
+[Serializable]
+public class CharacterAnimationData
+{
+    [Space] public AnimationReferenceAsset die;
 }

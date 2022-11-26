@@ -35,7 +35,7 @@ public class Flamingo : Ally
         base.OnActionDone();
 
 
-        foreach (var enemy in enemyDetector.enemies)
+        foreach (var enemy in EnemyDetector.enemies)
         {
             enemy.TakeDamage(damage, DamageSourceType.Normal);
 
