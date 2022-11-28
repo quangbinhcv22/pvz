@@ -17,7 +17,7 @@ public class BulletNormal : Bullet
 
     protected override void OnEnemyEnter(Character enemy)
     {
-        enemy.TakeDamage(owner._data.attackDamage);
+        enemy.TakeDamage(owner.config.attackDamage);
 
 
         GameAudio.Play("splat");

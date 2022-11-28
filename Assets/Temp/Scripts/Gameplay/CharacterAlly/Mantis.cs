@@ -49,7 +49,7 @@ public class Mantis : Ally
 
         foreach (var enemy in EnemyDetector.enemies)
         {
-            enemy.TakeDamage(_data.attackDamage, DamageSourceType.Normal);
+            enemy.TakeDamage(config.attackDamage, DamageSourceType.Normal);
         }
     }
 }

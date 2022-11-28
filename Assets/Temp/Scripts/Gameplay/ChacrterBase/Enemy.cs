@@ -25,7 +25,7 @@ public class Enemy : Character
 
             foreach (var enemy in EnemyDetector.enemies)
             {
-                enemy.TakeDamage(_data.attackDamage);
+                enemy.TakeDamage(config.attackDamage);
             }
         }
         else
@@ -33,19 +33,7 @@ public class Enemy : Character
             NextState();
         }
     }
-
-
-    protected override void SwitchState(string stateName)
-    {
-        if (stateName != StateName.Walk && stateName != StateName.Run)
-        {
-            MonoLifeCycle.OnUpdate -= Moving;
-        }
-
-        animator.PlayOnce(StateName.Ultimate);
-
-        base.SwitchState(stateName);
-    }
+    
 
     protected override void LoopStateAction()
     {
@@ -63,12 +51,18 @@ public class Enemy : Character
     protected virtual void StartMove()
     {
         timeline.Stop();
-
-
+        
         MonoLifeCycle.OnUpdate -= Moving;
         MonoLifeCycle.OnUpdate += Moving;
+        
+        animator.PlayLoop(StateName.Move);
+    }
 
-        SwitchState(StateName.Walk);
+    protected override void StartAction()
+    {
+        MonoLifeCycle.OnUpdate -= Moving;
+
+        base.StartAction();
     }
 
     protected virtual void Moving()

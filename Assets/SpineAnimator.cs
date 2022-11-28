@@ -5,9 +5,9 @@ using UnityEngine;
 public class SpineAnimator : MonoBehaviour
 {
     [SerializeField] private SkeletonAnimation animator;
-    
-    
-    void Start()
+
+
+    void Awake()
     {
         animator.Initialize(true);
     }
@@ -17,6 +17,10 @@ public class SpineAnimator : MonoBehaviour
         if (trackentry.Loop) return;
 
         SetStateDefault();
+    }
+
+    public void ReUse()
+    {
     }
 
     public void SetStateDefault()
@@ -44,7 +48,7 @@ public class SpineAnimator : MonoBehaviour
 
         animator.AnimationState.SetAnimation(0, stateName, false);
     }
-    
+
     public void Continue()
     {
         animator.enabled = true;
@@ -63,6 +67,6 @@ public static class StateName
     public const string Attack = "attack";
     public const string Ultimate = "ultimate";
     public const string Cooldown = "cooldown";
-    public const string Walk = "walk";
+    public const string Move = "move";
     public const string Run = "run";
 }

@@ -2,12 +2,11 @@ using UnityEngine;
 
 public partial class Character
 {
-    [Space] public CharacterData _data;
+    [Space] public CharacterData config;
 
     protected virtual void Init()
     {
         SelfCollider = GetComponent<Collider2D>();
-        
         
         LoadHpBar();
 

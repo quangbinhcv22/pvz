@@ -99,7 +99,7 @@ MonoBehaviour:
   model: {fileID: 6769154651084271529}
   animator: {fileID: 4336611002123120711}
   autoStart: 0
-  _data:
+  config:
     cost: 0
     cooldown: 0
     health: 0

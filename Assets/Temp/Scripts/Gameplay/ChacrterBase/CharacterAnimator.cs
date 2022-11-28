@@ -3,16 +3,6 @@ using UnityEngine;
 
 public partial class Character
 {
-    // private const string AttackClipName = "attack";
-    //
-    // private static readonly int Idle = Animator.StringToHash("idle");
-    // private static readonly int Attack = Animator.StringToHash("attack");
-    // private static readonly int Ultimate = Animator.StringToHash("ultimate");
-    // private static readonly int Move = Animator.StringToHash("move");
-    // private static readonly int Run = Animator.StringToHash("run");
-    // private static readonly int AttackSpeed = Animator.StringToHash("attack_speed");
-    //
-    //
     [SerializeField] protected SpineAnimator animator;
     //
     // private const float StandardSecondsPerAttack = 1f;

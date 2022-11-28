@@ -64,7 +64,7 @@ public partial class Character : MonoBehaviour
 
     public virtual void SetConfig(Team team, CharacterData data)
     {
-        _data = data;
+        config = data;
 
         SetStats(data);
 

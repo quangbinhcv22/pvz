@@ -51,7 +51,7 @@ public class Frog : Ally
             {
                 Debug.Log("Attack...");
 
-                closestEnemy.TakeDamage(_data.attackDamage);
+                closestEnemy.TakeDamage(config.attackDamage);
 
                 base.OnActionDone();
             }

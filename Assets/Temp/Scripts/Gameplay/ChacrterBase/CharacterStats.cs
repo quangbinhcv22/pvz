@@ -5,28 +5,42 @@ using UnityEngine;
 
 public partial class Character
 {
-    public readonly Dictionary<StatType, CharacterStat> Stats = new();
+    public Dictionary<StatType, CharacterStat> Stats;
 
-    public void SetStats(CharacterData data)
+
+    protected virtual void InitStats()
     {
-        Stats.Add(StatType.HealthMax, new CharacterStat(data.health));
+        Stats = new();
 
-        Stats.Add(StatType.HealthCurrent, new StatClamp(data.health)
+        Stats.Add(StatType.HealthMax, new CharacterStat());
+        {
+            Stats[StatType.HealthMax].OnValueChanged += UpdateHpBar;
+        }
+
+        Stats.Add(StatType.HealthCurrent, new StatClamp()
         {
             MinNumber = 0f,
             MaxStat = Stats[StatType.HealthMax],
         });
-
-        Stats[StatType.HealthCurrent].OnValueChanged += OnHealthChanged;
-        
-        Stats[StatType.HealthMax].OnValueChanged += UpdateHpBar;
-        Stats[StatType.HealthCurrent].OnValueChanged += UpdateHpBar;
+        {
+            Stats[StatType.HealthCurrent].OnValueChanged += OnHealthChanged;
+            Stats[StatType.HealthCurrent].OnValueChanged += UpdateHpBar;
+        }
     }
+
+    public void SetStats(CharacterData data)
+    {
+        if (Stats == null) InitStats();
+
+        Stats[StatType.HealthMax].RuntimeBaseValue = data.health;
+        Stats[StatType.HealthCurrent].RuntimeBaseValue = data.health;
+    }
+
 
     protected void OnHealthChanged()
     {
         var healthCurrent = Stats[StatType.HealthCurrent].RuntimeBaseValue;
-        
+
         if (healthCurrent <= 0)
         {
             StartDie();
@@ -46,7 +60,7 @@ public partial class Character
     public readonly ObservableFloat actionTime = new();
     public readonly ObservableFloat actionCooldown = new();
     public readonly ObservableFloat actionSpeedFactor = new();
-    
+
 
     protected float attackBreakTime;
 

@@ -22,5 +22,7 @@ MonoBehaviour:
     actionDuration: 1
     actionCooldown: 1
     attackDamage: 150
+    animations:
+      die: {fileID: 11400000, guid: 86b39508470770f439579986c57edfd8, type: 2}
     killDamage: 1000
     killCooldown: 25

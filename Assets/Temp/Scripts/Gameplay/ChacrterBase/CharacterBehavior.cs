@@ -18,6 +18,9 @@ public partial class Character
 
     public virtual void StartCycle()
     {
+        animator.ReUse();
+        animator.SetStateDefault();
+        
         if (!EnemyDetector) nextStateCallback = LoopStateAction;
         timeline.SetSeconds(delayStartCycle).SetCallback(NextState).Restart();
     }
@@ -51,19 +54,28 @@ public partial class Character
 
     protected virtual void StartDie()
     {
-        SelfCollider.enabled = false;
-        EnemyDetector.enabled = false;
-
+        DisableLogic();
+        
         animator.PlayLast(StateName.Die);
 
-        
-        timeline.SetSeconds(_data.animations.die.Animation.Duration).SetCallback(OnDieDone).Restart();
-
-        OnDieDone();
+        timeline.SetSeconds(config.animations.die.Animation.Duration).SetCallback(OnDieDone).Restart();
     }
 
     protected virtual void OnDieDone()
     {
         ReturnPool();
+    }
+
+
+    protected void EnableLogic()
+    {
+        SelfCollider.enabled = true;
+        EnemyDetector.enabled = true;
+    }
+
+    protected void DisableLogic()
+    {
+        SelfCollider.enabled = false;
+        EnemyDetector.enabled = false;
     }
 }

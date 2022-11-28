@@ -18,7 +18,7 @@ public class BulletThrough : Bullet
         cachedTransform.position = owner.transform.position;
 
         startX = cachedTransform.position.x;
-        endX = startX + owner._data.actionRange * BoardSetup.SizeUnit.x;
+        endX = startX + owner.config.actionRange * BoardSetup.SizeUnit.x;
     }
 
 
@@ -42,7 +42,7 @@ public class BulletThrough : Bullet
 
     protected override void OnEnemyEnter(Character enemy)
     {
-        enemy.TakeDamage(owner._data.attackDamage);
+        enemy.TakeDamage(owner.config.attackDamage);
         
         GameAudio.PlayRandom(impactClips);
     }

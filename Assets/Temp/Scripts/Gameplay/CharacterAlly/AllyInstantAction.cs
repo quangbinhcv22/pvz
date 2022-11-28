@@ -4,9 +4,8 @@ public class AllyInstantAction : Ally
 {
     public override void StartCycle()
     {
-        SelfCollider.enabled = true;
-        EnemyDetector.enabled = true;
-        
+        EnableLogic();
+
         Debug.Log("Start Action");
 
         StartAction();
@@ -18,17 +17,16 @@ public class AllyInstantAction : Ally
 
         Debug.Log("On Action Done");
 
-        
+
         foreach (var enemy in EnemyDetector.enemies)
         {
             ActionForEnemy(enemy);
         }
-        
+
 
         Debug.Log("Return");
 
         ReturnPool();
-
     }
 
     protected virtual void ActionForEnemy(Character enemy)
