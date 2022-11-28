@@ -16,7 +16,7 @@ public partial class Character : MonoBehaviour
 
         if (autoStart)
         {
-            var config = Addressables.LoadAssetAsync<AllyConfig>($"config_{name}").WaitForCompletion();
+            var config = Addressables.LoadAssetAsync<CharacterConfig>($"config_{name}").WaitForCompletion();
             SetConfig(teamTest, config.GetData());
 
             SetDirection(directionTest);
@@ -68,9 +68,7 @@ public partial class Character : MonoBehaviour
 
         SetStats(data);
 
-        actionTime.Value = data.actionDuration;
-        actionCooldown.Value = data.actionCooldown;
-        actionSpeedFactor.Value = 1f;
+
 
 
         if (data.UseRange)
@@ -81,7 +79,8 @@ public partial class Character : MonoBehaviour
             EnemyDetector.transform.SetParent(transform);
             EnemyDetector.SetSize(new Vector2(data.actionRange, 1));
 
-            ListenDetector();
+            EnemyDetector.onEnemyEnter += OnEnemyEnter;
+            EnemyDetector.onAllEnemyExit += OnAllEnemyEnter;
         }
 
 

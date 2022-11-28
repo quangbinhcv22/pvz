@@ -6,36 +6,18 @@ public partial class Character
 
     protected virtual void Init()
     {
-        SelfCollider = GetComponent<Collider2D>();
-        
         LoadHpBar();
 
         CalculateAnimFactor();
-
-        ListenStatChange();
-    }
-
-    protected virtual void ListenStatChange()
-    {
-        actionTime.onValueChanged += ReCalculateAttackBreakTime;
-        actionTime.onValueChanged += ReCalculateAttackAnimSpeed;
-
-        actionSpeedFactor.onValueChanged += ReCalculateAttackBreakTime;
-        actionSpeedFactor.onValueChanged += ReCalculateAttackAnimSpeed;
-
-        actionCooldown.onValueChanged += ReCalculateAttackBreakTime;
     }
 
 
-    protected Collider2D SelfCollider;
+    private Collider2D selfCollider;
+    protected Collider2D SelfCollider => selfCollider ??= GetComponent<Collider2D>();
+
+    
     protected EnemyDetector EnemyDetector;
-
-    protected virtual void ListenDetector()
-    {
-        EnemyDetector.onEnemyEnter += OnEnemyEnter;
-        EnemyDetector.onAllEnemyExit += OnAllEnemyEnter;
-    }
-
+    
 
     public Team Team
     {

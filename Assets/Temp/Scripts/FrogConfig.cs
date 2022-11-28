@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Ally/Frog", fileName = "frog")]
-public class FrogConfig : AllyConfig
+public class FrogConfig : CharacterConfig
 {
     public FrogData data;
 

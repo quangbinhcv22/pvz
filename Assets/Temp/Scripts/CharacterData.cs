@@ -28,5 +28,6 @@ public class CharacterData
 [Serializable]
 public class CharacterAnimationData
 {
+    [Space] public AnimationReferenceAsset attack;
     [Space] public AnimationReferenceAsset die;
 }

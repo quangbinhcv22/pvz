@@ -26,7 +26,7 @@ public class Flamingo : Ally
 
     private void StartPowerAction()
     {
-        timeline.SetSeconds(actionTime.Value).SetCallback(OnActionDone).Restart();
+        // timeline.SetSeconds(actionTime.Value).SetCallback(OnActionDone).Restart();
     }
 
 

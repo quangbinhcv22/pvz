@@ -26,14 +26,22 @@ public partial class Character
             Stats[StatType.HealthCurrent].OnValueChanged += OnHealthChanged;
             Stats[StatType.HealthCurrent].OnValueChanged += UpdateHpBar;
         }
+        
+        Stats.Add(StatType.AttackDuration, new());
+        Stats.Add(StatType.AttackCooldown, new());
+        Stats.Add(StatType.AttackSpeed, new());
     }
 
-    public void SetStats(CharacterData data)
+    protected virtual void SetStats(CharacterData data)
     {
         if (Stats == null) InitStats();
 
         Stats[StatType.HealthMax].RuntimeBaseValue = data.health;
         Stats[StatType.HealthCurrent].RuntimeBaseValue = data.health;
+        
+        Stats[StatType.AttackDuration].RuntimeBaseValue = data.actionDuration;
+        Stats[StatType.AttackCooldown].RuntimeBaseValue = data.actionCooldown;
+        Stats[StatType.AttackSpeed].RuntimeBaseValue = 1f;
     }
 
 
@@ -57,15 +65,9 @@ public partial class Character
     public float ultimateTime = 1f;
 
 
-    public readonly ObservableFloat actionTime = new();
-    public readonly ObservableFloat actionCooldown = new();
-    public readonly ObservableFloat actionSpeedFactor = new();
+    // public readonly ObservableFloat actionTime = new();
+    // public readonly ObservableFloat actionCooldown = new();
+    // public readonly ObservableFloat actionSpeedFactor = new();
 
 
-    protected float attackBreakTime;
-
-    private void ReCalculateAttackBreakTime(float unknown)
-    {
-        attackBreakTime = actionCooldown.Value / actionSpeedFactor.Value;
-    }
 }

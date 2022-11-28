@@ -1,10 +1,24 @@
 using System.Linq;
+using Kryz.CharacterStats;
 using UnityEngine;
 
 public class Enemy : Character
 {
-    [Space] public float moveTime = 0.2f;
+    protected override void InitStats()
+    {
+        base.InitStats();
 
+        Stats.Add(StatType.MovementSpeed, new CharacterStat());
+    }
+
+    public override void SetConfig(Team team, CharacterData data)
+    {
+        base.SetConfig(team, data);
+
+        var enemyConfig = (EnemyData)data;
+
+        Stats[StatType.MovementSpeed].RuntimeBaseValue = enemyConfig.moveSpeed;
+    }
 
     protected override void OnDisable()
     {
@@ -14,6 +28,8 @@ public class Enemy : Character
 
     public override void StartCycle()
     {
+        EnableLogic();
+
         NextStateCallback = LoopStateAction;
     }
 
@@ -33,7 +49,7 @@ public class Enemy : Character
             NextState();
         }
     }
-    
+
 
     protected override void LoopStateAction()
     {
@@ -51,10 +67,10 @@ public class Enemy : Character
     protected virtual void StartMove()
     {
         timeline.Stop();
-        
+
         MonoLifeCycle.OnUpdate -= Moving;
         MonoLifeCycle.OnUpdate += Moving;
-        
+
         animator.PlayLoop(StateName.Move);
     }
 
@@ -67,6 +83,6 @@ public class Enemy : Character
 
     protected virtual void Moving()
     {
-        transform.position += new Vector3(directionTest * moveTime * Time.deltaTime, 0);
+        transform.position += new Vector3(directionTest * Stats[StatType.MovementSpeed].Value * Time.deltaTime, 0);
     }
 }

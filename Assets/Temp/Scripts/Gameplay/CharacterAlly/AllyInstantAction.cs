@@ -4,8 +4,6 @@ public class AllyInstantAction : Ally
 {
     public override void StartCycle()
     {
-        EnableLogic();
-
         Debug.Log("Start Action");
 
         StartAction();

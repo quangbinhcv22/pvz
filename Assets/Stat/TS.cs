@@ -91,9 +91,13 @@ public enum StatType
     HealthCurrent = 2,
 
     Damage = 3,
-    CriticalRate = 4,
-    CriticalDamage = 5,
-    GeneralSpeed = 6,
-    MovementSpeed = 7,
-    AttackSpeed = 8,
+    
+    AttackDuration = 3,
+    AttackCooldown = 4,
+    AttackSpeed = 5,
+
+    CriticalRate = 6,
+    CriticalDamage = 7,
+    GeneralSpeed = 8,
+    MovementSpeed = 9,
 }

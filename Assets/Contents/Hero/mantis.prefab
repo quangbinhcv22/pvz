@@ -110,6 +110,7 @@ MonoBehaviour:
     actionCooldown: 0
     attackDamage: 0
     animations:
+      attack: {fileID: 0}
       die: {fileID: 0}
   teamTest: 0
   directionTest: 1

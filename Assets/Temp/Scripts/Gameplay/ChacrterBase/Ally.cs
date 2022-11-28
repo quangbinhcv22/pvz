@@ -13,7 +13,7 @@ public class Ally : Character
 
     protected virtual void OnUltimateDone()
     {
-        timeline.SetSeconds(attackBreakTime).SetCallback(NextState).Restart();
+        // timeline.SetSeconds(AttackBreakTime).SetCallback(NextState).Restart();
     }
 
     protected override void ReturnPool()

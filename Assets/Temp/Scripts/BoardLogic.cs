@@ -21,11 +21,13 @@ public static class BoardLogic
 
         var ally = Pool<Character>.Get(allyName).GetComponent<Ally>();
         {
+            Debug.Log(ally);
+            
             ally.transform.position = BoardSetup.GetPosition(index);
             ally.Index = index;
 
 
-            var config = Addressables.LoadAssetAsync<AllyConfig>($"config_{allyName}").WaitForCompletion();
+            var config = Addressables.LoadAssetAsync<CharacterConfig>($"config_{allyName}").WaitForCompletion();
             ally.SetConfig(Team.Ally, config.GetData());
 
             ally.SetDirection(1);

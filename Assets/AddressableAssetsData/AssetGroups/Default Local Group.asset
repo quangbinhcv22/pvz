@@ -53,6 +53,10 @@ MonoBehaviour:
     m_Address: hp_bar_enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 1727910197ef23048aafdcff37213c03
+    m_Address: config_knight
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2290570072ae1cc418ec720b61e2ec7e, type: 2}
   m_SchemaSet:

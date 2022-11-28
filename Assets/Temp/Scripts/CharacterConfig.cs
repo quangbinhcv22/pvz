@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class AllyConfig : ScriptableObject
+public abstract class CharacterConfig : ScriptableObject
 {
     public abstract CharacterData GetData();
 }

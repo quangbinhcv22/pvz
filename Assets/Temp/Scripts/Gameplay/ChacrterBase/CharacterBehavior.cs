@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using UnityEngine;
 
 public partial class Character
 {
@@ -18,9 +19,11 @@ public partial class Character
 
     public virtual void StartCycle()
     {
+        EnableLogic();
+
         animator.ReUse();
         animator.SetStateDefault();
-        
+
         if (!EnemyDetector) nextStateCallback = LoopStateAction;
         timeline.SetSeconds(delayStartCycle).SetCallback(NextState).Restart();
     }
@@ -43,19 +46,20 @@ public partial class Character
     protected virtual void StartAction()
     {
         animator.PlayOnce(StateName.Attack);
-        timeline.SetSeconds(actionTime.Value).SetCallback(OnActionDone).Restart();
+        timeline.SetSeconds(Stats[StatType.AttackDuration].Value).SetCallback(OnActionDone).Restart();
     }
 
     protected virtual void OnActionDone()
     {
-        timeline.SetSeconds(attackBreakTime).SetCallback(NextState).Restart();
+        var AttackBreakTime = Stats[StatType.AttackCooldown].Value / Stats[StatType.AttackSpeed].Value;
+        timeline.SetSeconds(AttackBreakTime).SetCallback(NextState).Restart();
     }
 
 
     protected virtual void StartDie()
     {
         DisableLogic();
-        
+
         animator.PlayLast(StateName.Die);
 
         timeline.SetSeconds(config.animations.die.Animation.Duration).SetCallback(OnDieDone).Restart();
@@ -69,13 +73,17 @@ public partial class Character
 
     protected void EnableLogic()
     {
-        SelfCollider.enabled = true;
-        EnemyDetector.enabled = true;
+        Debug.Log("Enable");
+
+        if (SelfCollider) SelfCollider.enabled = true;
+        if (EnemyDetector) EnemyDetector.enabled = true;
     }
 
     protected void DisableLogic()
     {
-        SelfCollider.enabled = false;
-        EnemyDetector.enabled = false;
+        Debug.Log("Disable");
+
+        if (SelfCollider) SelfCollider.enabled = false;
+        if (EnemyDetector) EnemyDetector.enabled = false;
     }
 }

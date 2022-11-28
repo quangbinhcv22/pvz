@@ -8370,7 +8370,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &238799058
 Rigidbody2D:
   serializedVersion: 4
@@ -8485,7 +8484,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &240330033
 Rigidbody2D:
   serializedVersion: 4
@@ -9860,7 +9858,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &294376190
 Rigidbody2D:
   serializedVersion: 4
@@ -10616,7 +10613,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &321725546
 Rigidbody2D:
   serializedVersion: 4
@@ -15051,7 +15047,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &465629276
 Rigidbody2D:
   serializedVersion: 4
@@ -18858,7 +18853,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &591658339
 Rigidbody2D:
   serializedVersion: 4
@@ -19247,7 +19241,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &602462642
 Rigidbody2D:
   serializedVersion: 4
@@ -25136,7 +25129,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &773736946
 Rigidbody2D:
   serializedVersion: 4
@@ -26840,7 +26832,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &838586749
 Rigidbody2D:
   serializedVersion: 4
@@ -29236,7 +29227,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &918542129
 Rigidbody2D:
   serializedVersion: 4
@@ -29476,7 +29466,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &926379906
 Rigidbody2D:
   serializedVersion: 4
@@ -29722,7 +29711,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &928545127
 Rigidbody2D:
   serializedVersion: 4
@@ -30039,7 +30027,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &934815265
 Rigidbody2D:
   serializedVersion: 4
@@ -31316,7 +31303,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &971119905
 Rigidbody2D:
   serializedVersion: 4
@@ -31558,7 +31544,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &976948053
 Rigidbody2D:
   serializedVersion: 4
@@ -32363,7 +32348,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &994463324
 Rigidbody2D:
   serializedVersion: 4
@@ -33096,7 +33080,7 @@ GameObject:
   - component: {fileID: 1028019725}
   - component: {fileID: 1028019724}
   m_Layer: 0
-  m_Name: mantis
+  m_Name: knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33134,7 +33118,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!114 &1028019725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35145,7 +35128,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1083099668
 Rigidbody2D:
   serializedVersion: 4
@@ -37849,7 +37831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -37954,7 +37935,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1155355836
 Rigidbody2D:
   serializedVersion: 4
@@ -39119,7 +39099,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1173298046
 Rigidbody2D:
   serializedVersion: 4
@@ -44666,7 +44645,7 @@ GameObject:
   - component: {fileID: 1377413769}
   - component: {fileID: 1377413768}
   m_Layer: 0
-  m_Name: mantis
+  m_Name: knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44704,7 +44683,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!114 &1377413769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54600,7 +54578,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1653268497
 Rigidbody2D:
   serializedVersion: 4
@@ -56809,7 +56786,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1738108308
 Rigidbody2D:
   serializedVersion: 4
@@ -59038,7 +59014,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1833789583
 Rigidbody2D:
   serializedVersion: 4
@@ -59649,7 +59624,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1862530261
 Rigidbody2D:
   serializedVersion: 4
@@ -60121,7 +60095,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1877692649
 Rigidbody2D:
   serializedVersion: 4
@@ -62069,7 +62042,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &1938042624
 Rigidbody2D:
   serializedVersion: 4
@@ -67255,7 +67227,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!50 &2117977578
 Rigidbody2D:
   serializedVersion: 4
@@ -71009,7 +70980,7 @@ GameObject:
   - component: {fileID: 4336611001928177353}
   - component: {fileID: 8212367090135084328}
   m_Layer: 0
-  m_Name: mantis
+  m_Name: knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71559,7 +71530,6 @@ MonoBehaviour:
   presetAttackSpeedFactor: 1
   delayStartCycle: 1
   ultimateTime: 1
-  moveTime: 0.2
 --- !u!114 &8307142764507679090
 MonoBehaviour:
   m_ObjectHideFlags: 0
